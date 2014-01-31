@@ -154,7 +154,7 @@ function saveAsSVG(svg) {
   setTimeout(function() {
     window.URL.revokeObjectURL(url);
     a.remove();
-  }, 10);
+  }, 100);
 };
 
 function saveAsPNG() {
@@ -169,7 +169,7 @@ function saveAsPNG() {
 
   setTimeout(function() {
     a.remove();
-  }, 10);
+  }, 100);
 };
 
 function xmlnsFix(svg) {
