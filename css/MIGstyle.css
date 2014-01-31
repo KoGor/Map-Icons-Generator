@@ -1,0 +1,55 @@
+body {
+  background: #fcfcfa;
+  color: #333;
+  font-family: "PT Serif", serif;
+  margin: 1em auto 4em auto;
+  position: relative;
+  width: 960px;
+}
+
+body p {
+width: 720px;
+}
+
+h1, h2 {
+text-rendering: optimizeLegibility;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+  margin-top: 2em;
+}
+
+header, footer, h1, h2, h3, h4, aside {
+color: #000;
+font-family: "PT Sans", sans-serif;
+}
+
+svg, canvas {
+  display: inline;
+  vertical-align: middle;
+  border: 2px solid #98bf21;
+}
+
+svg:hover, canvas:hover {
+  fill-opacity: .75;
+}
+
+.tooltip {
+  position: fixed;
+  display: none;
+  pointer-events: none;
+  background: #fff;
+  padding: 5px;
+  text-align: left;
+  border: solid #ccc 1px;
+  color: #666;
+  font-size: 12px;
+  font-family: sans-serif;
+  bottom: 0;
+  left: 0;
+}

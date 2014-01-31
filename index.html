@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+  <title>Map icons generator</title>
+</head>
+<body>
+  <!-- start -->
+  <header>
+    <h1>
+      Map icons generator
+    </h1>
+  </header>
+  <div class="iconsPreview" id="vectorPreview">
+    <header>
+      <h2>Vector preview (SVG)</h2>
+    </header>
+    <button class="savebtn" type="button" id="vectorSave">Save as SVG</button>
+  </div>
+  <div class="iconsPreview" id="rasterPreview">
+    <header>
+      <h2>Raster preview (Canvas)</h2>
+    </header>
+    <button class="savebtn" type="button" id="rasterSave">Save as PNG</button>
+  </div>
+  <!-- end -->
+  
+  <link href="css/MIGstyle.css" rel="stylesheet">
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/topojson.v1.min.js"></script>
+  <script src="js/queue.v1.min.js"></script>
+  <script src="js/MapIconsGenerator.js"></script>
+</body>
+</html>
