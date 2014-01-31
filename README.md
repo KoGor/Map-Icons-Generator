@@ -8,8 +8,8 @@ By default MIG generates icons for 174 world countries, GeoData is 1:110m [natur
 
 If you want more - you can create another input GeoData file and change couple of corresponding code lines. All is quite easy. First of all you have to create [TopoJSON](https://github.com/mbostock/topojson/wiki) file. Make it with help of [Command-line TopoJSON](https://github.com/mbostock/topojson/wiki/Command-Line-Reference) application. If you don't have proper data for naming icons inside TopoJSON file - use external .csv or .tsv file. So now you have new input file(s), so update paths for them in the code:
 ```js
-  .defer(d3.json, "data/TopoJSON_file.json")
-  .defer(d3.tsv, "data/external_file_for_names.tsv")
+.defer(d3.json, "data/TopoJSON_file.json")
+.defer(d3.tsv, "data/external_file_for_names.tsv")
 ```
 Next step is to change feature name according to your new TopoJSON file:
 ```js
