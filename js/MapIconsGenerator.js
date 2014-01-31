@@ -3,7 +3,7 @@ var iconSize = "72",
     iconMargins = 3,
     fillColor = "#636363",
     borderColor = "#000000",
-    borderWidth = "1px", 
+    borderWidth = 1, 
     //contryList = [643, 840], //list of ids for filtering
     tooltip = d3.select("body").append("div").attr("class", "tooltip");
 
@@ -43,7 +43,7 @@ function generator(error, world, countries) {
 
 function generateVector(world, countries, countryById) {
   var svg = d3.select("#vectorPreview").selectAll("svg")
-      .data(topojson.feature(world, world.objects.countries).features
+      .data(topojson.feature(world, world.objects.countries).features)
       //.data(topojson.feature(world, world.objects.countries).features.filter(function(d) {return contryList.indexOf(d.id) > -1;}))
     .enter().append("svg")
       .each(function(d) {
@@ -77,7 +77,7 @@ function generateVector(world, countries, countryById) {
           .append("path")
             .style("fill", fillColor)
             .style("stroke", borderColor)
-            .style("stroke-width", borderWidth)
+            .style("stroke-width", borderWidth / s + "px")
             .attr("d", path);
       })
       .sort(function(a, b) { return a.id - b.id; })

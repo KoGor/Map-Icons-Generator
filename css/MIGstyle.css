@@ -32,7 +32,7 @@ font-family: "PT Sans", sans-serif;
 svg, canvas {
   display: inline;
   vertical-align: middle;
-  border: 2px solid #98bf21;
+  border: 1px solid #98bf21;
 }
 
 svg:hover, canvas:hover {
