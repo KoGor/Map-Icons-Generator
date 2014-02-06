@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+  <title>Map icons generator</title>
+</head>
+<body>
+  <!-- start -->
+  <header>
+    <h1>
+      Map Icons Generator
+    </h1>
+  </header>
+  <div id="controlPanel" class="inline">
+    <ul class="row">
+      <li>Icon&nbsp;size:&nbsp;<input type="number" name="iconSize" min="16" max="96" step="16" value="72"></li>
+      <li>Icon's&nbsp;margins:&nbsp;<input type="number" name="iconMargins" min="1" max="48" step="2" value="3"></li>
+      <li>Country&nbsp;color:&nbsp;<input type="color" name="fillColor" value="#636363"></li>
+      <li>Border&nbsp;color:&nbsp;<input type="color" name="strokeColor" value="#000000"></li>
+      <li>Border&nbsp;thickness:&nbsp;<input type="number" name="strokeWidth" min="0.5" max="5" step="0.5" value="1"></li>
+      <!-- <li>Simplification:&nbsp;<input type="number" name="strokeSmplf" min="0.5" max="5" step="0.5" value="1"></li> -->
+      <li>
+        Filter&nbsp;region:&nbsp;
+        <select name="regions">
+          <option class="iconsFilter" value="All">All countries</option>
+          <option class="iconsFilter" value="Africa">Africa</option>
+          <option class="iconsFilter" value="Antarctica">Antarctica</option>
+          <option class="iconsFilter" value="Asia">Asia</option>
+          <option class="iconsFilter" value="Europe" selected>Europe</option>
+          <option class="iconsFilter" value="North America">North America</option>
+          <option class="iconsFilter" value="Oceania">Oceania</option>
+          <option class="iconsFilter" value="Seven seas (open ocean)">Seven seas (open ocean)</option>
+          <option class="iconsFilter" value="South America">South America</option>
+        </select>
+      </li> 
+    </ul>
+    <button class="generatebtn" type="button" id="generateIcons">Generate</button>
+  </div>
+  <div class="iconsPreview" id="vectorPreview">
+    <header>
+      <h2>Vector preview (SVG)</h2>
+    </header>
+    <button class="savebtn" type="button" id="vectorSave">Save all as SVG</button>
+  </div>
+  <div class="iconsPreview" id="rasterPreview">
+    <header>
+      <h2>Raster preview (Canvas)</h2>
+    </header>
+    <button class="savebtn" type="button" id="rasterSave">Save all as PNG</button>
+  </div>
+  <!-- end -->
+  
+  <link href="MIGstyle.css" rel="stylesheet">
+  <script src="libs/d3.v3.min.js"></script>
+  <script src="libs/topojson.v1.min.js"></script>
+  <script src="libs/queue.v1.min.js"></script>
+  <script src="MapIconsGenerator_UI.js"></script>
+
+</body>
+</html>
