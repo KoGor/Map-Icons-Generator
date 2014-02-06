@@ -81,7 +81,7 @@ function generateVector(world, countries, countryById) {
             .attr("d", path);
       })
       .sort(function(a, b) { return a.id - b.id; })
-      .on("click", function() {console.log(this.id);})
+      .on("click", saveAsSVG)
       .on("mouseover", function(d, i) {
         var t = tooltip.html("").style("display", "block");
         t.append("span").attr("class", "country").text(countryById[d.id]);
@@ -111,7 +111,7 @@ function generateRaster(svg) {
   var context = canvas.node().getContext("2d");
   
   canvas
-    .on("click", function() {console.log(this.id);})
+    .on("click", saveAsPNG)
     .on("mouseover", function() {
       id = this.id;
       var t = tooltip.html("").style("display", "block");
