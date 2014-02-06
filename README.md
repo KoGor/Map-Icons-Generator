@@ -4,7 +4,7 @@ Map Icons Generator (MIG)
 MIG is simple tool for generating icons (both vector and raster) based on cartographic data. It is quite flexible, you can change color, lines width, margins and of course size of icons. As far as it based on GeoData ([TopoJSON](https://github.com/mbostock/topojson/wiki)) you can easily change projection and it's parameters or filter regions by geo conditions. And you can feed to it any map: world map, country map with administrative borders or even your town map with districts borders.
 
 ## How to use
-By default MIG generates icons for 174 world countries, GeoData is 1:110m [natural earth data](http://www.naturalearthdata.com/downloads/). If it's just what you want you can change some general parameters directly in the code or with help of GUI on [demopage](#).
+By default MIG generates icons for 174 world countries, GeoData is 1:110m [natural earth data](http://www.naturalearthdata.com/downloads/). If it's just what you want you can change some general parameters directly in the code or with help of GUI on [demopage](http://kogor.github.io//Map-Icons-Generator/).
 
 If you want more - you can create another input GeoData file and change couple of corresponding code lines. All is quite easy. First of all you have to create [TopoJSON](https://github.com/mbostock/topojson/wiki) file. Make it with help of [Command-line TopoJSON](https://github.com/mbostock/topojson/wiki/Command-Line-Reference) application. If you don't have proper data for naming icons inside TopoJSON file - use external .csv or .tsv file. So now you have new input file(s), so update paths for them in the code:
 ```js
