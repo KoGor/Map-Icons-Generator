@@ -37,6 +37,8 @@ svg, canvas {
 
 svg:hover, canvas:hover {
   fill-opacity: .75;
+  opacity: .75;
+  cursor: pointer;
 }
 
 .tooltip {
